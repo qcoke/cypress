@@ -10,6 +10,10 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
     "vuepress": "^1.8.2"
   }
 }

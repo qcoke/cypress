@@ -14,5 +14,11 @@ yarn add cypress --dev
 
 ![alt="Cypress安装"](/imgs/install.gif)
 
+
+生成测试报告 npm安装 
+```javascript
+npm install --save-dev mocha mochawesome mochawesome-merge mochawesome-report-generator
+```
+
 #### PS: NodeJS的安装
 [NodeJS](https://nodejs.org/en/)
