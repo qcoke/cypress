@@ -37,7 +37,7 @@ cy.get('#loading').should('not.exist')
 ```
 - 针对元素状态的（State）的断言
 ```javascript
-//重试,直到这个radio button是选中状态
+// 重试,直到这个radio button是选中状态
 cy.get(':radio').should('be.checked')
 ```
 - 针对CSS的断言
