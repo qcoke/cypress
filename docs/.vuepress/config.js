@@ -3,7 +3,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/get-started' },
-      { text: 'API', link: 'https://docs.cypress.io/api/api/table-of-contents.html' },
+      { text: '常用API', link: '/guide/API' },
+      { text: '官方API', link: 'https://docs.cypress.io/api/api/table-of-contents.html' },
       { text: '官网', link: 'https://www.cypress.io/' },
       { text: 'Github地址', link: 'https://github.com/cypress-io/cypress' }
     ],
@@ -17,6 +18,7 @@ module.exports = {
             { title: '快速安装', path: '/guide/install' },
             { title: '基础概念', path: '/guide/concept' },
             { title: '开始一个简单测试', path: '/guide/first-test' },
+            { title: '常用API', path: '/guide/API' },
             { title: '常见问题', path: '/guide/FAQ' }
           ]
         }
