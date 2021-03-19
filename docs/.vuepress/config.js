@@ -1,5 +1,9 @@
 module.exports = {
   title: 'Cypress.io',
+  base: '/cypress/',
+  head: [
+    ['link', {rel: 'icon', href: '/imgs/logo.png'}]
+  ],
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/get-started' },

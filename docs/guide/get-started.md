@@ -11,12 +11,12 @@
 我们在用 Selenium 时，需要集成单元测试框架（unittest、pytest），想要好看的测试报告还得集成（allure），想要 Mock 还得引入对应的 Mock 库
 而 Cypress 是开箱即用！
 
-![alt="cypress架构"](/imgs/kaixiang.png)
+<img :src="$withBase('/imgs/kaixiang.png')" alt="cypress架构">
 
 在上述的基础上，Cypress 还具备以下优势：
 
 - <b>跨浏览器</b>
-![alt="跨浏览器"](/imgs/browsers.png)
+<img :src="$withBase('/imgs/browsers.png')" alt="跨浏览器">
 - <b>时间穿梭：</b>Cypress 会在测试运行时拍摄快照。只需将鼠标悬停在“ 命令日志”中的命令上，即可准确查看每一步都发生了什么
 - <b>可调试性：</b>停止猜测你的测试失败的原因。直接从熟悉的工具如 Chrome DevTools 进行调试。我们可读的错误和堆栈跟踪使调试更加快速便捷。
 - <b>实时重载：</b>每当你对测试进行更改时，Cypress 都会自动重新加载。查看应用程序中实时执行的命令。

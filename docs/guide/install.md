@@ -12,7 +12,7 @@ yarn add cypress --dev
 
 您将看到如下的安装过程
 
-![alt="Cypress安装"](/imgs/install.gif)
+<img :src="$withBase('/imgs/install.gif')" alt="Cypress安装">
 
 
 生成测试报告 npm安装 

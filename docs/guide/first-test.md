@@ -5,10 +5,10 @@ npm init
 ```
 
 如下图：
-![alt="创建工程"](/imgs/npm_init.png)
+<img :src="$withBase('/imgs/npm_init.png')" alt="创建工程">
 
 开始安装 Cypress
 ```javascript
 npm install cypress
 ```
-![alt="Cypress"](/imgs/install_cypress.png)
+<img :src="$withBase('/imgs/install_cypress.png')" alt="Cypress">
