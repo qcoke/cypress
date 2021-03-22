@@ -45,3 +45,26 @@ cy.get(':radio').should('be.checked')
 // 重试,直到completed这个类有匹配的css为止
 cy.get('.completed').should('have.css','text-decoration','line-through')
 ```
+## Jenkins 持续集成
+Cypress 可以通过 Jenkins 的插件机制持续的集成，使用方法和常见的 NodeJS 插件类似，这里不展开篇幅说。也是通过插件配置
+执行相关的 Shell 或者 NodeJS 代码，最后建议配置生成相关的报告。通过邮箱等发送。
+
+## "PageObject" 测试模式
+在编写代码的过程中，有一种叫做 PageObject 的方式。原理很简单，是通过把界面常见的操作比如输入用户名和密码，放置在另外
+的 js 中，做成一个通用的方法，而把其他的断言等，放在核心的测试库中。通过这样的抽离达到用户的指令反复重用的目的。所以
+由此基础之上，Cypress 充分考虑了此问题，做出了 commands 的机制。通过编写自定义的指令，放置在系统启动的位置。进而随着
+系统的启动直接注入顶层 Cy 对象，在测试代码的任意位置可以实现优雅的调用。详见 [commands](https://docs.cypress.io/api/cypress-api/custom-commands.html#Syntax)
+
+## 为何要使用 date-cy ？直接使用 Class，ID 进行 Dom 查找不好吗？
+官方建议使用 data-test, data-cy 来替代 Class, ID 的查找是出于对前端代码的侵入性导致。前端开发中会经常使用 Dom 编程
+来实现界面交互上的操作。因为测试而导致修改 Class，ID 很有可能会直接导致原有的界面逻辑出现变动而导致的错误。使用 data-*
+此类的自定义属性能够从一定程度上避免此类事故的发生。
+
+## Cypress 能够支持多浏览器、多环境配置么？
+本质上来说，Cypress 是通过 NodeJS 的底层驱动。所以从 NodeJS 对环境变量的读取能够很好的区分不同的环境，而对不同的环境
+进行 Cypress.config 文件进行分门别类的处理。比如：设置 baseURL,API Service等。
+
+## Cypress 能够测试 API 么？
+Cypress 内置了 request 对象，所以通过配置 header 和 option 等就可以完全模拟 HttpRequest 请求。它同时也支持 Mock Server
+
+

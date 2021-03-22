@@ -4,7 +4,7 @@
 假设我们编写的每个功能程序都是一个黑匣子，最终用户也只会看到这个黑匣子，那么站在用户的角度来看并不需要知道这个黑匣子内部是什么东西也不需要知道怎么实现的，我只管知道最终效果是不是我们想要的。
 那么映射到前端这边的话就是：我不管你逻辑使用什么框架什么逻辑写的，我只想知道浏览器上我要的交互效果，UI 展示效果是不是正确的，功能使用上是不是正确的，那么这就叫 E2E 测试。
 
-如果说Web自动化测试，大家最熟悉不过的就是 Selenium 了。其实还有 testcafe、mocha、jtest 和 cypress 等。Selenium 作为老牌的测试工具。Selenium WebDriver 是我们都知道和喜爱的开源自动化工具。Selenium 已经成为许多现代软件团队的基础测试自动化工具包。最大的优点是其支持多种语言（Java,PHP,Python等），它拥有庞大的活跃用户社区，并且是唯一能够通过<font color=red>全端浏览器测试</font>的工具，使其成为跨浏览器测试的必要条件。
+如果说Web自动化测试，大家最熟悉不过的就是 Selenium <font color="orange">[sə'liːniəm]</font> 了。其实还有 testcafe、mocha、jtest 和 cypress 等。Selenium 作为老牌的测试工具。Selenium WebDriver 是我们都知道和喜爱的开源自动化工具。Selenium 已经成为许多现代软件团队的基础测试自动化工具包。最大的优点是其支持多种语言（Java,PHP,Python等），它拥有庞大的活跃用户社区，并且是唯一能够通过<font color=red>全端浏览器测试</font>的工具，使其成为跨浏览器测试的必要条件。
 
 ### 为什么要使用 Cypress ?
 
