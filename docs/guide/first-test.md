@@ -49,18 +49,17 @@ npm install cypress
 
 context('系统登录测试', () => {
   const userName = 'admin', passRight = '123456', passError = '666666';
-
   // 首先打开一个网页
-  beforeEach(() => {
+  before(() => {
     cy.viewport(1920, 1080);
-    cy.visit('http://owner3.smlm.songmingkeji.com:30000/auth/#/');
+    cy.visit('/auth/#/');
   })
 
   it('完全不输入用户名、密码、验证码模拟登录，界面上有且需要三个红框提示用户需要输入相关错误提示。', () => {
     cy.get('.login-submit').click();
     cy.get('.el-form-item.is-error .el-input__inner').should('have.length', 3);
-  }) 
-  
+  })
+
   it('模拟用户输入一个错误的验证码，界面需要提示，请输入正确的验证码。', () => {
     // 模拟输入
     cy.get('input[type]').eq(0).type(userName);
@@ -90,7 +89,11 @@ context('系统登录测试', () => {
     // 暂停一下，无法验证验证码
     cy.pause();
     cy.get('.login-submit').click();
-    cy.url().should("equal", "http://owner3.smlm.songmingkeji.com:30000/sys/#/default")
+    cy.saveInfo();
+    // 保存令牌，待用
+    expect(sessionStorage.getItem('smlm-token')).to.not.equal(null || undefined);
   });
 });
 ```
+这里我们注意调用了一个 ```cy.saveInfo();``` 它调用的就是我们在 support/commands.js 中编写的用例代码。
+
