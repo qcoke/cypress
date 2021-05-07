@@ -1,9 +1,8 @@
 Cypress 底层依赖于很多优秀的开源框架，比如 Mock，Mocha，Chai 等。也由于它本身的内置类似于“约定大于配置”的理念，
-才能够使其“开箱即用”。在正式开始之前，介绍几个基础的概念。
+才能够使其“开箱即用”。在正式代码编写开始之前，我们先介绍几个基础的概念。
 
 ## 文件结构
-<!-- ![alt="文件结构"](/imgs/structure.png) -->
-<img :src="$withBase('/imgs/structure.png')" alt="文件结构">
+<img :src="$withBase('/imgs/structure.png')" alt="文件结构" style="margin:20px 0 10px 0" />
 
 在工程目录中
 - <b>fixtures:</b> 放置我们需要依赖的部分数据，它既可以模拟接口返回的值。也可以用于发送提交表单的数据集合。

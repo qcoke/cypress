@@ -2,7 +2,7 @@ module.exports = {
   title: 'Cypress.io',
   base: '/cypress/',
   head: [
-    ['link', {rel: 'icon', href: '/imgs/logo.png'}]
+    ['link', { rel: 'icon', href: '/imgs/logo.png' }]
   ],
   themeConfig: {
     nav: [
@@ -18,12 +18,12 @@ module.exports = {
           title: '指南',
           collapsable: false,
           children: [
-            { title: '背景、发展', path: '/guide/get-started' },
-            { title: '快速安装', path: '/guide/install' },
-            { title: '基础概念', path: '/guide/concept' },
-            { title: '开始一个简单测试', path: '/guide/first-test' },
-            { title: '常用API', path: '/guide/API' },
-            { title: '常见问题', path: '/guide/FAQ' }
+            { title: '背景、发展、介绍', path: '/guide/get-started' },
+            { title: '环境参数与安装', path: '/guide/install' },
+            { title: '文件夹结构', path: '/guide/concept' },
+            { title: '开始编码测试', path: '/guide/first-test' },
+            { title: '常见问题总结', path: '/guide/FAQ' },
+            { title: '常用API', path: '/guide/API' }
           ]
         }
       ]
