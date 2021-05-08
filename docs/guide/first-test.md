@@ -217,3 +217,6 @@ context('区域管理测试组', () => {
   });
 });
 ```
+在这里，有一个 intercept 方法，cy.intercept 是用于监听网络层的 HTTP 请求，在这里我们可以用任意的夹具数据或者自定义的参数<br/>
+```cy.intercept('http://example.com/widgets', { fixture: 'widgets.json' })```
+使用 as 方法重命名请求，等待 wait 之后的 Promise 调用。
