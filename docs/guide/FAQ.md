@@ -67,4 +67,9 @@ Cypress 可以通过 Jenkins 的插件机制持续的集成，使用方法和常
 ## Cypress 能够测试 API 么？
 Cypress 内置了 request 对象，所以通过配置 header 和 option 等就可以完全模拟 HttpRequest 请求。它同时也支持 Mock Server
 
+## 在使用 JWT 的时候，我们有大量的数据需要保存下来，如何保存？
+仅只能依靠编码来，我们可以使用 Cookies 来保存
+```Cypress.Cookies.preserveOnce('smlm-refresh-token', 'smlm-access-token');```具体的参数可以查看 Cypress.io 的 API 文档
+关于 SessionStore，localStore 的保存，可以查看编写的代码教程。具体可以参考链接 [登录模块的例子](https://docs.cypress.io/examples/examples/recipes#Logging-In)
 
+未完待续......
