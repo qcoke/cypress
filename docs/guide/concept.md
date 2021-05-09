@@ -1,6 +1,3 @@
-Cypress 底层依赖于很多优秀的开源框架，比如 Mock，Mocha，Chai 等。也由于它本身的内置类似于“约定大于配置”的理念，
-才能够使其“开箱即用”。在正式代码编写开始之前，我们先介绍几个基础的概念。
-
 ## 文件结构
 <img :src="$withBase('/imgs/structure.png')" alt="文件结构" style="margin:20px 0 10px 0" />
 
@@ -14,8 +11,22 @@ Cypress 提供了一些现成的插件，使你能够定制化一些 Cypress 的
 为了运行的方便，每次测试文件运行之前，Cypress 都会自动加载 support/index.js plugins/index.js 文件
 
 ## Mocha
+Cypress 底层依赖于很多优秀的开源框架，比如 Mock，Mocha，Chai 等。也由于它本身的内置类似于“约定大于配置”的理念，才能够使其“开箱即用”。
 
 Mocha 是一个功能丰富的javascript测试框架，运行在 node.js 和浏览器中，使异步测试变得简单有趣。Mocha 测试连续运行，允许灵活和准确的报告，同时将未捕获的异常映射到正确的测试用例。
+```javascript
+var assert = require('assert');
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function() {
+      assert.equal([1,2,3].indexOf(4), -1);
+    });
+  });
+});
+```
+### Mocha + Chai 的组合
+为什么会有 Chai ？ 因为 Chai 让 Mocha 的语法看起来更加的 “人性化” 也更加符合 BDD 的规范，通过用户精准的描述表达，把需要的测试用例翻译成为机器代码。expect 和 should是 BDD 风格的，二者使用相同的链式语言来组织断言，但不同在于他们初始化断言的方式：expect 使用构造函数来创建断言对象实例，而should通过为Object.prototype新增方法来实现断言（所以should不支持IE）；expect 直接指向 chai.expect，而should则是chai.should()。
+
 
 <b>describe</b> 块称为"测试套件"（test suite），表示一组相关的测试。它是一个函数，第一个参数是测试套件的名称，第二个参数是一个实际执行的函数。
 
