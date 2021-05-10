@@ -20,7 +20,7 @@ module.exports = {
           children: [
             { title: '背景、发展、介绍', path: '/guide/get-started' },
             { title: '环境参数与安装', path: '/guide/install' },
-            { title: '文件夹结构', path: '/guide/concept' },
+            { title: '简介', path: '/guide/concept' },
             { title: '开始编码测试', path: '/guide/first-test' },
             { title: '常见问题总结', path: '/guide/FAQ' },
             { title: '常用API', path: '/guide/API' }
