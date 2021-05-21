@@ -1,3 +1,6 @@
+#### 资料
+[API地址](http://man.hubwiz.com/manual/Chai)
+
 #### 元素选择和操作
 <table border="0" class="md-table">
   <tr>
